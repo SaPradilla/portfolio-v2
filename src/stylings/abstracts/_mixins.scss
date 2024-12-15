@@ -38,6 +38,9 @@
 @mixin text-h1-light{
     text-shadow: 0px 0px 50px #f59f0b5d;
 }
+@mixin text-light{
+    text-shadow: 0px 0px 50px #f59f0b5d !important;
+}
 
 @mixin text-opacity{
     color: $text-opacity;

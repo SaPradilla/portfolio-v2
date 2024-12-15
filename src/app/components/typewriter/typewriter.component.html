@@ -1,3 +1,9 @@
-<div class="typewriter">
+<!-- <div class="typewriter">
     <h3>{{ displayedText }}</h3>
-</div>
+</div> -->
+
+<ngx-typed-js [strings]="profesions" [typeSpeed]="50" [backSpeed]="50" [startDelay]="1000" [backDelay]="1000" [loop]="true" [showCursor]="true" [cursorChar]="''">
+    <div class="typer_content">
+        <h3 class="typing"></h3>
+    </div>
+</ngx-typed-js>

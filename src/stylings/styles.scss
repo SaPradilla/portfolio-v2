@@ -2,6 +2,7 @@
 @import './abstracts/variables';
 @import './elements/texts.scss';
 @import './elements/buttons.scss';
+@import './abstracts/mixins.scss';
 
 *{
     padding: 0;
@@ -14,4 +15,10 @@ body{
     scroll-behavior: smooth;
     font-family: "Onest", sans-serif;
 
+}
+
+// apply the typed cursor color 
+.typed-cursor{
+    color: $primary !important;
+    @include text-light ;
 }

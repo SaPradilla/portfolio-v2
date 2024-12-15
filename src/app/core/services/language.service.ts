@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
     providedIn: 'root'
 })
 export class LanguageService {
+    
     private readonly langKey = 'language';
     public currentLang = signal<string>('es');
     private translations = signal<Translation>({});
