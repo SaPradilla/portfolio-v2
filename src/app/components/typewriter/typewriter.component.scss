@@ -1,0 +1,25 @@
+@import '../../../stylings/abstracts/variables';
+
+.typewriter{
+    height: 3rem ;
+}
+
+.typewriter h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    width: min-content;
+    border-right: 0.1em solid $primary;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: $primary;
+    }
+}

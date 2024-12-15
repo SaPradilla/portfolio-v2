@@ -1,0 +1,67 @@
+<nav class="desktop" [class]="menuOptions ? 'open' : 'closed'">
+    
+    <ul>
+        <li><a href="#sobre-mi">Sobre Mi</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li>
+            <button (click)="handleMenuOptions()" class="icon">
+                <fa-icon [icon]="faGear" class="nav__config-icon"></fa-icon>
+            </button>
+
+        </li>
+    </ul>
+    <div class="desktop__options">
+        <div  [@menuOptionsToggle]=" menuOptions ? 'open' : 'closed'" class="desktop__options__content">
+            <ul>
+                <li (click)="toggleLanguage()">
+                    <a>
+                        {{ currentLang() === 'es' ? 'English' : 'Español' }}
+                        <fa-icon [icon]="faLanguage" class="desktop__options__icon"></fa-icon>
+                    </a>
+                </li>
+                <li (click)="toggle()">
+                    <a>
+                        {{ 
+                            theme() === 'light' ? 'Dark' : 'Light'
+                        }}
+                        <fa-icon [icon]="faCircleHalfStroke" class="desktop__options__icon"></fa-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav class="mobile" [@menuToggle]="menuMobile ? 'open' : 'closed'">
+    <button (click)="handleMenuMobile()" class="icon menu-icon">
+        <fa-icon [icon]="faXmark" class="mobile__icon mobile__icon--close"></fa-icon>
+    </button>
+    <ul>
+        <li><a (click)="handleMenuMobile()" href="#sobre-mi">Sobre Mi</a></li>
+        <li><a (click)="handleMenuMobile()" href="#habilidades">Habilidades</a></li>
+        <li><a (click)="handleMenuMobile()" href="#experiencia">Experiencia</a></li>
+        <li><a (click)="handleMenuMobile()" href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li (click)="toggleLanguage(true)">
+            <a>
+                {{ currentLang() === 'es' ? 'English' : 'Español' }}
+                <fa-icon [icon]="faLanguage" class="mobile__icon"></fa-icon>
+            </a>
+        </li>
+        <li (click)="toggle(true)">
+            <a>
+                {{ 
+                    theme() === 'light' ? 'Dark' : 'Light'
+                }}
+                <fa-icon [icon]="faCircleHalfStroke" class="mobile__icon"></fa-icon>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<button (click)="handleMenuMobile()" class="icon menu-icon ">
+    <fa-icon [icon]="faBars"></fa-icon>
+</button>

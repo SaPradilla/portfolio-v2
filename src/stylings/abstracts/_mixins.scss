@@ -1,0 +1,158 @@
+@import './variables';
+
+// width 
+
+@mixin width{
+    width: 100vh;
+    @include mobile{
+        width: 100%;
+    }
+}
+
+
+// texts
+@mixin text-h1{
+    font-size: $text-h1;
+    font-weight: 600;
+    color: $white;
+    @include mobile{
+        font-size: $text-h1-mobile;
+    }
+}
+@mixin text-h2{
+    font-size: $text-h2;
+    color: $white;
+    @include mobile{
+        font-size: $text-h2-mobile;
+    }
+}
+@mixin text-h3{
+    font-weight: 500;
+    font-size: $text-h3;
+    @include text-opacity;
+    @include mobile{
+        font-size: $text-h3-mobile;
+    }
+}
+
+@mixin text-h1-light{
+    text-shadow: 0px 0px 50px #f59f0b5d;
+}
+
+@mixin text-opacity{
+    color: $text-opacity;
+}
+
+@mixin text-a{
+    color: $white;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    &:hover{
+        color: $text-opacity !important;
+    }
+}
+
+
+// buttons
+@mixin button{
+    width: 130px;
+    height: 44px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: $border-radius;
+    transition: all 0.4s ease-in-out;
+    @include mobile{
+        height: 40px;
+        font-size: .9rem;
+        width: 100%;
+    }
+   
+}
+
+@mixin button-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: $secondary;
+    cursor: pointer;
+    color: $primary;
+    // padding: .5rem;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+    @include light-mode{
+        background-color: $white;
+        color: $primary;
+    }
+    &:hover{
+        border: 1px solid $border !important;
+    }
+    &:active{
+        background-color: $border !important;
+        color: $white !important;
+    }
+    @include mobile{
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+   
+}
+
+@mixin button-primary{
+    @include button;
+    background-color: $primary;
+    color: $white;
+    border: none;
+    &:hover{
+        background-color: $primary-hover !important;
+    }
+}
+
+@mixin button-secondary{
+    @include button;
+    
+    color: $primary;
+    background-color: $secondary;
+    border: .15rem solid $primary;
+    &:hover{
+        background-color: $primary-hover-low !important;
+    }
+    @include light-mode{
+        background-color: $white;
+    }
+}
+
+// flex
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+// responsive
+@mixin mobile {
+    @media only screen and (width <=#{$mobile-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (width <=#{$tablet-breakpoint}) {
+        @content;
+    }
+}
+
+// dark mode
+
+@mixin light-mode {
+    .light main & {
+      @content;
+    }
+  }

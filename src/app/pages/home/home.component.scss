@@ -1,0 +1,32 @@
+
+@import '../../../stylings/abstracts/mixins';
+@import '../../../stylings/abstracts/variables';
+
+.home{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include width;
+    h1{
+        span{
+            color: $primary;
+        }
+    }
+    h3{
+        color: $text-opacity;
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 2rem;
+    }
+    @include mobile{
+        align-items: center;
+        justify-content: center;
+
+        &__buttons{
+            width: 100%;
+        }
+    }
+
+}

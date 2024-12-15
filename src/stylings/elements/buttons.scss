@@ -1,0 +1,14 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+
+button.primary{    
+    @include button-primary;
+}
+button.secondary{
+    @include button-secondary;
+}
+
+button.icon{
+    @include button-icon;
+}

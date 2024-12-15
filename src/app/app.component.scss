@@ -1,0 +1,23 @@
+@import '../stylings/abstracts/mixins';
+
+.portfolio{
+    background-color: $secondary;
+    &.light{
+        background-color: $white;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        height: 100vh;
+        margin: 0 auto;
+        width: 100vh;
+        position: relative;
+        @include mobile{
+            width: 100%;
+        }
+    }
+   
+}
