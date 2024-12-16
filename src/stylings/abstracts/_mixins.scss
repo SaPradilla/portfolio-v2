@@ -68,6 +68,7 @@
     font-style: italic;
     color: rgb(95, 101, 112);
     margin-top: .7rem;
+    text-transform: lowercase;
     @include mobile{
         text-align: center;
     }

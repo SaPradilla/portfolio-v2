@@ -1,6 +1,7 @@
 {
   "Sobre Mi": "Sobre Mí",
-  "Habilidades": "Habilidades", 
+  "Habilidades": "Habilidades",
+  "Bienvenido": "Bienvenido",
   "Experiencia": "Experiencia",
   "Proyectos": "Proyectos",
   "Contacto": "Contacto",
@@ -9,8 +10,9 @@
   "Light": "Claro",
   "Dark": "Oscuro",
   "Idioma": "Language",
-  "Desarrollador backend":"Desarrollador backend",
-  "Analista":"Analista",
-  "Desarrollador frontend":"Desarrollador frontend",
-  "Diseñador gráfico":"Diseñador gráfico"
+  "Desarrollador backend": "Desarrollador backend",
+  "Analista": "Analista",
+  "Desarrollador frontend": "Desarrollador frontend",
+  "Diseñador gráfico": "Diseñador gráfico",
+  "Sobre":"perseverante, versátil, ágil y me adapto a cualquier ambiente con facilidad gracias a mi actitud positiva. Me gusta compartir mis conocimientos y ayudar a los demás; una de mis mayores virtudes es el no rendirme con facilidad."
 }

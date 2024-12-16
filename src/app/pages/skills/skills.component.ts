@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/services/language.service';
 
 @Component({
   selector: 'app-skills',
@@ -48,4 +49,11 @@ export class SkillsComponent {
       {name:'Postman',img:'assets/images/postman.png'},
     ]
   }
+
+  private langService: LanguageService = inject(LanguageService);
+
+  translate(key: string): string {
+      return this.langService.translate(key);
+  }
+
 }

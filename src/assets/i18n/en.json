@@ -1,6 +1,7 @@
 {
   "Sobre Mi": "About Me",
   "Habilidades": "Skills",
+  "Bienvenido": "Welcome",
   "Experiencia": "Experience",
   "Proyectos": "Projects",
   "Contacto": "Contact",
@@ -12,5 +13,7 @@
   "Desarrollador backend": "Backend Developer",
   "Analista": "Analyst",
   "Desarrollador frontend":"Frontend Developer",
-  "Diseñador gráfico": "Graphic Designer"
+  "Diseñador gráfico": "Graphic Designer",
+  "Sobre":"perseverant, versatile, agile and I adapt to any environment with ease thanks to my positive attitude. I like to share my knowledge and help others; one of my greatest virtues is not giving up easily."
+
 }
