@@ -2,77 +2,118 @@
 
 // width 
 
-@mixin width{
-    width: 100vh;
-    @include mobile{
+@mixin width {
+    width: 120vh;
+
+    @include mobile {
         width: 100%;
     }
 }
 
+@mixin padding {
+    padding: 0 2rem;
+
+    @include mobile {
+        padding: 0 1rem;
+    }
+}
 
 // texts
-@mixin text-h1{
+@mixin text-h1 {
     font-size: $text-h1;
     font-weight: 600;
     color: $white;
-    @include mobile{
+
+    @include mobile {
+        text-align: center;
         font-size: $text-h1-mobile;
     }
 }
-@mixin text-h2{
+
+@mixin text-h2 {
     font-size: $text-h2;
-    color: $white;
-    @include mobile{
+    color: $primary;
+
+    @include mobile {
+        text-align: center;
         font-size: $text-h2-mobile;
     }
 }
-@mixin text-h3{
-    font-weight: 500;
+
+@mixin text-h3 {
+    font-weight: 400;
     font-size: $text-h3;
     @include text-opacity;
-    @include mobile{
+
+    @include mobile {
+        text-align: center;
         font-size: $text-h3-mobile;
     }
 }
 
-@mixin text-h1-light{
+@mixin text-p {
+    font-size: $text-p;
+    color: $white;
+
+    @include mobile {
+        text-align: center;
+        font-size: $text-p-mobile;
+    }
+}
+
+@mixin text-h4-tag {
+    font-size: 1.2rem;
+    font-family: 'Consolas';
+    font-weight: lighter;
+    font-style: italic;
+    color: rgb(95, 101, 112);
+    margin-top: .7rem;
+    @include mobile{
+        text-align: center;
+    }
+}
+
+@mixin text-h1-light {
     text-shadow: 0px 0px 50px #f59f0b5d;
 }
-@mixin text-light{
+
+@mixin text-light {
     text-shadow: 0px 0px 50px #f59f0b5d !important;
 }
 
-@mixin text-opacity{
+@mixin text-opacity {
     color: $text-opacity;
 }
 
-@mixin text-a{
+@mixin text-a {
     color: $white;
     transition: all 0.4s ease-in-out;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
         color: $text-opacity !important;
     }
 }
 
 
 // buttons
-@mixin button{
+@mixin button {
     width: 130px;
     height: 44px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: $border-radius;
     transition: all 0.4s ease-in-out;
-    @include mobile{
+
+    @include mobile {
         height: 40px;
         font-size: .9rem;
         width: 100%;
     }
-   
+
 }
 
-@mixin button-icon{
+@mixin button-icon {
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -80,51 +121,58 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    background-color: $secondary;
+    // background-color: $secondary;
     cursor: pointer;
     color: $primary;
     // padding: .5rem;
+    background-color: transparent;
     border: 1px solid transparent;
     transition: all 0.2s ease-in-out;
-    @include light-mode{
-        background-color: $white;
+
+    @include light-mode {
         color: $primary;
     }
-    &:hover{
+
+    &:hover {
         border: 1px solid $border !important;
     }
-    &:active{
+
+    &:active {
         background-color: $border !important;
         color: $white !important;
     }
-    @include mobile{
+
+    @include mobile {
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
     }
-   
+
 }
 
-@mixin button-primary{
+@mixin button-primary {
     @include button;
     background-color: $primary;
     color: $white;
     border: none;
-    &:hover{
+
+    &:hover {
         background-color: $primary-hover !important;
     }
 }
 
-@mixin button-secondary{
+@mixin button-secondary {
     @include button;
-    
+
     color: $primary;
     background-color: $secondary;
     border: .15rem solid $primary;
-    &:hover{
+
+    &:hover {
         background-color: $primary-hover-low !important;
     }
-    @include light-mode{
+
+    @include light-mode {
         background-color: $white;
     }
 }
@@ -156,6 +204,20 @@
 
 @mixin light-mode {
     .light main & {
-      @content;
+        @content;
     }
-  }
+}
+
+
+// patterns
+
+@mixin pattern-point {
+    background-color: $secondary;
+    opacity: 1;
+    background-image: radial-gradient($border 0.9px, $secondary 0.9px);
+    background-size: 18px 18px;
+    position: relative;
+    :host-context(.light) &{
+        background-image: radial-gradient($border 0.9px, $white 0.9px) !important;
+    }
+}

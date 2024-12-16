@@ -9,10 +9,12 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
 body{
     height: 100%;
-    scroll-behavior: smooth;
     font-family: "Onest", sans-serif;
 
 }
@@ -21,4 +23,7 @@ body{
 .typed-cursor{
     color: $primary !important;
     @include text-light ;
+    @include mobile{
+        font-size: 1.5rem !important;
+    }
 }

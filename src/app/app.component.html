@@ -1,6 +1,13 @@
 <div class="portfolio" [class]="{'light': theme() === 'light', 'dark': theme() === 'dark'}">
+    <app-news></app-news>
+    <app-navbar></app-navbar>
     <main>
-        <app-navbar></app-navbar>
         <app-home></app-home>
+        <app-about></app-about>
+        <div class="portfolio__divider"></div>
+        <app-skills></app-skills>
     </main>
+    <footer>
+        
+    </footer>
 </div>

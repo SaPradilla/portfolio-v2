@@ -3,30 +3,41 @@
 @import '../../../stylings/abstracts/variables';
 
 .home{
+    // background-color: red;
+    height: 100vh;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    gap: 1rem;
     @include width;
-    h1{
-        span{
-            color: $primary;
+    @include padding;
+    &__content{
+
+        // gap: 1rem;
+        h1{
+            span{
+                color: $primary;
+                @include text-h1-light;
+            }
+            
         }
-    }
-    h3{
-        color: $text-opacity;
-    }
 
-    &__buttons{
-        display: flex;
-        gap: 2rem;
-    }
-    @include mobile{
-        align-items: center;
-        justify-content: center;
-
+    
         &__buttons{
-            width: 100%;
+            display: flex;
+            gap: 1rem;
         }
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            &__buttons{
+                width: 100%;
+            }
+        }
+       
     }
+  
 
 }

@@ -1,0 +1,36 @@
+@import '../../../stylings/abstracts/mixins';
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+
+    @include width;
+    @include padding;
+    border-top: 1px solid $border;
+    padding-top:1rem;
+
+    @include mobile{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 1rem;
+        p{
+            width: 20rem;
+        }
+    }
+    img{
+        width:  15rem;
+        height: 15rem;
+        border-radius: 100%;
+        height: auto;
+    }
+
+    .about-text{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

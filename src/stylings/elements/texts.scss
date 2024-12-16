@@ -15,10 +15,16 @@ h3{
 a{
     @include text-a;
 }
+h4{
+    @include text-h4-tag;
 
-h1,h2,a{
+}
+p{
+    @include text-p;
+}
+h1,h2,a,p{
     @include light-mode{
         color: $dark;
     }
+    
 }
-

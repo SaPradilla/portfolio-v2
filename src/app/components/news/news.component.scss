@@ -1,0 +1,15 @@
+@import '../../../stylings/abstracts/variables';
+
+.news{
+    background-color: $primary;
+    padding: .4rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+    height: 30px;
+    small{
+        color: $white;
+    }
+}

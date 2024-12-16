@@ -3,13 +3,20 @@
 
 nav.desktop {
     position: fixed;
-    top: 2%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vh;
-    border: 1px solid $border;
-    border-radius: $border-radius;
+    top:30px ;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+    border-bottom: 1px solid $border;
+    // border-radius: $border-radius;
     transition: border-radius 0.3s ease-in-out;
+    // margin-bottom: 70px;
+    backdrop-filter: blur(40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     @include mobile {
         display: none;
     }
@@ -22,17 +29,31 @@ nav.desktop {
     }
 
     ul {
-        padding: .8rem;
+        padding: .2rem;
         list-style: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        gap: 2rem;
         li{
+            padding: 1rem 0;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+        a{
+            :host-context(.light) & {
+                color: $dark;
+            }
+        }
        
+    }
+
+    .desktop__separator{
+        height: 30px;
+        width: 2.1px;
+        background-color: $border;
     }
     .nav__config-icon {
         cursor: pointer;
@@ -45,48 +66,51 @@ nav.desktop {
         }
     }
 
-    .desktop__options{
-        width: 100%;
-        position: relative;
-        &__content{
-            overflow: hidden;
-            position: absolute;
-            right: -1px;
-            width: 120px;
-            background-color: $border;
-            border: 1px solid transparent;
-            border-color: $border;
-            border-top: 0;
-            border-radius: $border-radius;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            :host-context(.light) & {
-                background-color: $border-light;
-            }
-            ul{
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                // align-items: center; 
-                li{
-                    a{
-                        padding: .7rem;
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    width: 100%;
-                    // align-items: center;
-                }
-            }
-        }
-    }
+    // .desktop__options{
+    //     width: 50vh;
+    //     position: relative;
+    //     // height: 1px;
+    //     // background-color: red;
+    //     &__content{
+    //         overflow: hidden;
+    //         position: absolute;
+    //         right: -1px;
+    //         width: 120px;
+    //         background-color: $border;
+    //         border: 1px solid transparent;
+    //         border-color: $border;
+    //         border-top: 0;
+    //         border-radius: $border-radius;
+    //         border-top-left-radius: 0;
+    //         border-top-right-radius: 0;
+    //         :host-context(.light) & {
+    //             background-color: $border-light;
+    //         }
+    //         ul{
+    //             padding: 0;
+    //             display: flex;
+    //             flex-direction: column;
+    //             gap: 0;
+    //             // align-items: center; 
+    //             li{
+    //                 a{
+    //                     padding: .7rem;
+    //                     width: 100%;
+    //                     display: flex;
+    //                     justify-content: space-between;
+    //                 }
+    //                 width: 100%;
+    //                 // align-items: center;
+    //             }
+    //         }
+    //     }
+    // }
    
 }
 
 nav.mobile {
     display: none;
-    z-index: 100;
+    z-index: 101;
     position: fixed;
     top: 0;
     left: 0;
@@ -137,11 +161,11 @@ nav.mobile {
 
 button.icon.menu-icon {
     display: none;
-
+    z-index: 8;
     @include mobile {
         display: inline;
         position: fixed;
-        top: 2%;
+        top: 30px;
         right: 2%;
     }
 }
